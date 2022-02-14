@@ -29,7 +29,7 @@ jobs:
       with:
         server: ftp.eleclere.devwebgarneau.com
         username: eleclere
-        password: ${{ secrets.ftp_password }}    
+        password: ${{ secrets.MY_SECRET_THING }}    
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
