@@ -16,8 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+       fetch-depth: 0 
     
-    - name: Sync files
+    - name: Publish chromatic
       uses: chromaui/action@v1
       with:
         server: ftp.eleclere.devwebgarneau.com
