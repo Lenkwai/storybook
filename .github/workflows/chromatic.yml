@@ -23,7 +23,5 @@ jobs:
     - name: Publish chromatic
       uses: chromaui/action@v1
       with:
-        server: ftp.eleclere.devwebgarneau.com
-        token: ${{ secrets.CHROM_GITHUB_TOKEN }}
         projectToken: ${{ secrets.MY_SECRET_TOKEN }}   
 
