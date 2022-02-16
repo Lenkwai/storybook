@@ -21,5 +21,6 @@ jobs:
       with:
         server: ftp.eleclere.devwebgarneau.com
         username: eleclere
-        password: ${{ secrets.MY_SECRET_THING }}    
+        password: ${{ secrets.MY_SECRET_THING }}  
+        server-dir: public_html/
 
