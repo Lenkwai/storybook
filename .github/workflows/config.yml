@@ -15,11 +15,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+    - name: Install dependencies
+      run: yarn
     - name: Build Project
       run:
-        yarn build:docs
-    
+        yarn build:docs    
     - name: Deploy storybook
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
