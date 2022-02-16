@@ -16,11 +16,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Sync files
+    - name: Build Project
+      run:
+        yarn build:docs
+    
+    - name: Deploy storybook
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: ftp.eleclere.devwebgarneau.com
         username: eleclere
-        password: ${{ secrets.MY_SECRET_THING }}  
-        server-dir: public_html/
+        password: ${{ secrets.MY_SECRET_THING }} 
+        local-dir: ./storybook-static/
+        server-dir: public_html/storybook/
 
